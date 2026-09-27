@@ -17,7 +17,7 @@ int main()
     std::cout << "\n";
 
     std::cout << "Current directory:" << std::endl;
-    std::cout << PathToUTF8(fs::current_path()) << '\n'; // Для отображения русских букв в пути (при использовании UTF-8 для перевода вместо setlocale)
+    std::cout << PathToUTF8(fs::current_path()) << '\n'; 
     std::cout << "\n";
 
     std::cout << "Commands:" << std::endl;

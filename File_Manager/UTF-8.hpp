@@ -8,6 +8,3 @@ namespace fs = std::filesystem;
 
 std::string PathToUTF8(const fs::path& path);
 
-
-//^^
-//Этот файл для вывода русских букв
