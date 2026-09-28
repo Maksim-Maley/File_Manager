@@ -175,6 +175,7 @@ void Commands::move(const std::string& argument, const std::string& argument1)
             fs::path source = argument;
             fs::path destination = fs::path(argument1) / source.filename();
             fs::rename(source, destination);
+            std::cout << "Файл перемещен\n";
         }
     }
     catch (const fs::filesystem_error& e)
@@ -197,9 +198,10 @@ void Commands::rename(const std::string& argument, const std::string& argument1)
         }
         else
         {
-            fs::path lastname = argument;
+            fs::path oldname = argument;
             fs::path newname = argument1;
-            fs::rename(lastname, newname);
+            fs::rename(oldname, newname);
+            std::cout << "Файл переименован\n";
         }
     }
     catch (const fs::filesystem_error& e)
@@ -282,7 +284,7 @@ void Commands::help()
     std::cout << "mkdir  " << "[namedir|pathdir]" << std::endl;
     std::cout << "create " << "[filename]" << std::endl;
     std::cout << "write  " << "[filename]" << std::endl;
-    std::cout << "copy   " << "[filename][path|filename]" << std::endl;
+    std::cout << "copy   " << "[filename][-|pathfilename|filename]" << std::endl;
     std::cout << "move   " << "[filename][path]" << std::endl;
     std::cout << "rename " << "[oldname][newname]" << std::endl;
     std::cout << "remove " << "[filename|dirname]" << std::endl;

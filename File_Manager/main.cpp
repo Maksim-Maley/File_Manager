@@ -105,6 +105,11 @@ int main()
             commands.help();
         }
 
+        else
+        {
+            std::cout << PathToUTF8("Неизвестная команда\n");
+        }
+
     }
 
 

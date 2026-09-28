@@ -23,7 +23,7 @@ std::string PathToUTF8(const fs::path& path)
         wide.c_str(),
         -1,
         result.data(),
-        size,
+        size -1,
         nullptr,
         nullptr
     );
